@@ -11,13 +11,6 @@ module Api
   			end
 
 			def create
-				puts request.original_url
-				puts request.host
-				puts request.port
-				puts request.fullpath
-				puts request.domain
-				puts request.protocol
-				@request_obj = request
 				expires_at =  params[:expire_date] || (Time.now + 1.days)
 				attributes = {
 					longurl: params[:url],
@@ -53,8 +46,6 @@ module Api
 			end
 
 			def go
-				puts "--------------------------------hello------------------"
-				puts "---------#{request}---------"
 				@longurl = Rails.cache.fetch(params[:shorturlkey])
 				if @longurl.blank?
 					puts "...........querying from db ........"

@@ -2950,140 +2950,121 @@ Processing by Api::V1::ShorturlsController#create as JSON
 Completed 200 OK in 431ms (Views: 1.6ms | ActiveRecord: 23.9ms)
 
 
-Started POST "/api/v1/shorturls?url=http://www.stackoverflow.com" for 127.0.0.1 at 2016-04-19 19:47:13 +0530
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:37:46 +0530
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
 Processing by Api::V1::ShorturlsController#create as JSON
-  Parameters: {"url"=>"http://www.stackoverflow.com"}
-  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-19 14:17:13.871353') AND `shorturls`.`longurl` = 'http://www.stackoverflow.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
-  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
-  [1m[35mSQL (0.6ms)[0m  INSERT INTO `shorturls` (`longurl`, `expires_at`, `created_at`, `updated_at`) VALUES ('http://www.stackoverflow.com', '2016-04-20 14:17:13', '2016-04-19 14:17:13', '2016-04-19 14:17:13')
-  [1m[36mSQL (0.8ms)[0m  [1mUPDATE `shorturls` SET `longurl` = 'http://www.stackoverflow.com', `expires_at` = '2016-04-20 14:17:13', `created_at` = '2016-04-19 14:17:13', `updated_at` = '2016-04-19 14:17:13', `id` = 5, `shorturlkey` = '10e' WHERE `shorturls`.`id` = 5[0m
-  [1m[35m (34.0ms)[0m  COMMIT
-  [1m[36mShorturl Load (0.8ms)[0m  [1mSELECT  `shorturls`.* FROM `shorturls` WHERE `shorturls`.`longurl` = 'http://www.stackoverflow.com'  ORDER BY `shorturls`.`id` DESC LIMIT 1[0m
-  [1m[35m (0.3ms)[0m  BEGIN
-  [1m[36mSQL (0.8ms)[0m  [1mUPDATE `shorturls` SET `shorturl` = 'http://localhost:3000/go/10e', `updated_at` = '2016-04-19 14:17:13' WHERE `shorturls`.`id` = 5[0m
-  [1m[35m (33.0ms)[0m  COMMIT
-Dalli::Server#connect localhost:11211
-localhost:11211 failed (count: 0) Errno::ECONNREFUSED: Connection refused - connect(2) for "localhost" port 11211
-Completed 200 OK in 185ms (Views: 0.3ms | ActiveRecord: 73.7ms)
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:07:47.020401') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 75ms (Views: 0.3ms | ActiveRecord: 3.0ms)
 
 
-Started GET "/go/10e" for 127.0.0.1 at 2016-04-19 19:47:53 +0530
-Processing by Api::V1::ShorturlsController#go as */*
-  Parameters: {"shorturlkey"=>"10e"}
-Dalli::Server#connect localhost:11211
-localhost:11211 failed (count: 1) Errno::ECONNREFUSED: Connection refused - connect(2) for "localhost" port 11211
-localhost:11211 is down
-  [1m[36mShorturl Load (0.5ms)[0m  [1mSELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-19 14:17:53.235486') AND `shorturls`.`shorturlkey` = '10e'  ORDER BY `shorturls`.`id` ASC LIMIT 1[0m
-Redirected to http://www.stackoverflow.com
-Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
-Dalli::Server#connect localhost:11211
-localhost:11211 failed (count: 0) Errno::ECONNREFUSED: Connection refused - connect(2) for "localhost" port 11211
-Dalli::Server#connect localhost:11211
-localhost:11211 failed (count: 1) Errno::ECONNREFUSED: Connection refused - connect(2) for "localhost" port 11211
-localhost:11211 is down
-Dalli::Server#connect localhost:11211
-localhost:11211 failed (count: 2) Errno::ECONNREFUSED: Connection refused - connect(2) for "localhost" port 11211
-localhost:11211 is still down (for 3.663 seconds now)
-down_retry_delay not reached for localhost:11211 (0.282 seconds left)
-Dalli::Server#connect localhost:11211
-localhost:11211 failed (count: 3) Errno::ECONNREFUSED: Connection refused - connect(2) for "localhost" port 11211
-localhost:11211 is still down (for 4.879 seconds now)
-down_retry_delay not reached for localhost:11211 (0.396 seconds left)
-Dalli::Server#connect localhost:11211
-localhost:11211 failed (count: 4) Errno::ECONNREFUSED: Connection refused - connect(2) for "localhost" port 11211
-localhost:11211 is still down (for 6.084 seconds now)
-down_retry_delay not reached for localhost:11211 (0.477 seconds left)
-down_retry_delay not reached for localhost:11211 (0.021 seconds left)
-Dalli::Server#connect localhost:11211
-localhost:11211 failed (count: 5) Errno::ECONNREFUSED: Connection refused - connect(2) for "localhost" port 11211
-localhost:11211 is still down (for 11.561 seconds now)
-down_retry_delay not reached for localhost:11211 (0.998 seconds left)
-
-
-Started POST "/api/v1/shorturls?url=http://www.urbanladder.com" for 127.0.0.1 at 2016-04-19 19:50:21 +0530
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:38:59 +0530
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
 Processing by Api::V1::ShorturlsController#create as JSON
-  Parameters: {"url"=>"http://www.urbanladder.com"}
-  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-19 14:20:21.749205') AND `shorturls`.`longurl` = 'http://www.urbanladder.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
-Completed 200 OK in 64ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:08:59.705516') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 68ms (Views: 0.4ms | ActiveRecord: 3.1ms)
 
 
-Started POST "/api/v1/shorturls?url=https://spring.io" for 127.0.0.1 at 2016-04-19 20:03:04 +0530
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
-Processing by Api::V1::ShorturlsController#create as JSON
-  Parameters: {"url"=>"https://spring.io"}
-  [1m[35mShorturl Load (0.6ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-19 14:33:05.011441') AND `shorturls`.`longurl` = 'https://spring.io'  ORDER BY `shorturls`.`id` ASC LIMIT 1
-  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
-  [1m[35mSQL (0.5ms)[0m  INSERT INTO `shorturls` (`longurl`, `expires_at`, `created_at`, `updated_at`) VALUES ('https://spring.io', '2016-04-20 14:33:05', '2016-04-19 14:33:05', '2016-04-19 14:33:05')
-  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `shorturls` SET `longurl` = 'https://spring.io', `expires_at` = '2016-04-20 14:33:05', `created_at` = '2016-04-19 14:33:05', `updated_at` = '2016-04-19 14:33:05', `id` = 6, `shorturlkey` = '10f' WHERE `shorturls`.`id` = 6[0m
-  [1m[35m (32.6ms)[0m  COMMIT
-  [1m[36mShorturl Load (0.7ms)[0m  [1mSELECT  `shorturls`.* FROM `shorturls` WHERE `shorturls`.`longurl` = 'https://spring.io'  ORDER BY `shorturls`.`id` DESC LIMIT 1[0m
-  [1m[35m (0.2ms)[0m  BEGIN
-  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `shorturls` SET `shorturl` = 'http://localhost:3000/go/10f', `updated_at` = '2016-04-19 14:33:05' WHERE `shorturls`.`id` = 6[0m
-  [1m[35m (35.0ms)[0m  COMMIT
-Completed 500 Internal Server Error in 109ms (ActiveRecord: 73.1ms)
-
-NotImplementedError (NotImplementedError):
-  app/controllers/api/v1/shorturls_controller.rb:25:in `create'
-
-
-  Rendered /home/manas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.4ms)
-  Rendered /home/manas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.1ms)
-  Rendered /home/manas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
-  Rendered /home/manas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.8ms)
-  Rendered /home/manas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
-  Rendered /home/manas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
-  Rendered /home/manas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
-  Rendered /home/manas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
-  Rendered /home/manas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (124.8ms)
-  Rendered /home/manas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
-  Rendered /home/manas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
-  Rendered /home/manas/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (206.3ms)
-
-
-Started POST "/api/v1/shorturls?url=https://spring.io" for 127.0.0.1 at 2016-04-19 20:04:51 +0530
-Processing by Api::V1::ShorturlsController#create as JSON
-  Parameters: {"url"=>"https://spring.io"}
-  [1m[36mShorturl Load (0.5ms)[0m  [1mSELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-19 14:34:51.948233') AND `shorturls`.`longurl` = 'https://spring.io'  ORDER BY `shorturls`.`id` ASC LIMIT 1[0m
-Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 1.9ms)
-
-
-Started GET "/go/10f" for 127.0.0.1 at 2016-04-19 20:05:42 +0530
-Processing by Api::V1::ShorturlsController#go as */*
-  Parameters: {"shorturlkey"=>"10f"}
-  [1m[35mShorturl Load (1.0ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-19 14:35:42.717315') AND `shorturls`.`shorturlkey` = '10f'  ORDER BY `shorturls`.`id` ASC LIMIT 1
-Redirected to https://spring.io
-Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
-
-
-Started GET "/api/v1/shorturls/go/10e" for 127.0.0.1 at 2016-04-22 21:01:37 +0530
-  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
-Processing by Api::V1::ShorturlsController#go as JSON
-  Parameters: {"shorturlkey"=>"10e"}
-  [1m[35mShorturl Load (0.7ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 15:31:38.724755') AND `shorturls`.`shorturlkey` = '10e'  ORDER BY `shorturls`.`id` ASC LIMIT 1
-  Rendered text template (0.1ms)
-Completed 200 OK in 157ms (Views: 62.1ms | ActiveRecord: 3.2ms)
-
-
-Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:02:18 +0530
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:41:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
 Processing by Api::V1::ShorturlsController#create as JSON
   Parameters: {"url"=>"http://www.facebook.com"}
-  [1m[36mShorturl Load (1.0ms)[0m  [1mSELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 15:32:18.935923') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1[0m
-  [1m[35m (0.5ms)[0m  BEGIN
-  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `shorturls` (`longurl`, `expires_at`, `created_at`, `updated_at`) VALUES ('http://www.facebook.com', '2016-04-23 15:32:18', '2016-04-22 15:32:18', '2016-04-22 15:32:18')[0m
-  [1m[35mSQL (21.8ms)[0m  UPDATE `shorturls` SET `longurl` = 'http://www.facebook.com', `expires_at` = '2016-04-23 15:32:18', `created_at` = '2016-04-22 15:32:18', `updated_at` = '2016-04-22 15:32:18', `id` = 7, `shorturlkey` = '10g' WHERE `shorturls`.`id` = 7
-  [1m[36m (63.9ms)[0m  [1mCOMMIT[0m
-  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` DESC LIMIT 1
-  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
-  [1m[35mSQL (0.8ms)[0m  UPDATE `shorturls` SET `shorturl` = 'http://localhost:3000/go/10g', `updated_at` = '2016-04-22 15:32:19' WHERE `shorturls`.`id` = 7
-  [1m[36m (50.8ms)[0m  [1mCOMMIT[0m
-Completed 200 OK in 213ms (Views: 0.2ms | ActiveRecord: 140.7ms)
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:11:30.331946') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 74ms (Views: 0.3ms | ActiveRecord: 3.1ms)
 
 
-Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:06:16 +0530
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:42:14 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::V1::ShorturlsController#create as JSON
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:12:14.786039') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 74ms (Views: 0.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:42:49 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::V1::ShorturlsController#create as JSON
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:12:50.465296') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 68ms (Views: 0.6ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:43:21 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::V1::ShorturlsController#create as JSON
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:13:21.724963') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 69ms (Views: 0.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:43:53 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::V1::ShorturlsController#create as JSON
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.9ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:13:54.229036') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 76ms (Views: 0.5ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:45:02 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::V1::ShorturlsController#create as JSON
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:15:03.218676') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 74ms (Views: 0.3ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:45:31 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::V1::ShorturlsController#create as JSON
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:15:32.136567') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 70ms (Views: 0.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:46:07 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::V1::ShorturlsController#create as JSON
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:16:08.556099') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 72ms (Views: 0.5ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:46:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::V1::ShorturlsController#create as JSON
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (1.0ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:16:47.283932') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 74ms (Views: 0.4ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:47:53 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::V1::ShorturlsController#create as JSON
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:17:54.077369') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 67ms (Views: 0.4ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:49:02 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::V1::ShorturlsController#create as JSON
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:19:02.753141') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 73ms (Views: 0.7ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:49:40 +0530
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
 Processing by Api::V1::ShorturlsController#create as JSON
   Parameters: {"url"=>"http://www.facebook.com"}
-  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 15:36:16.700646') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
-Completed 200 OK in 65ms (Views: 0.3ms | ActiveRecord: 3.0ms)
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:19:41.444183') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 74ms (Views: 0.3ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:51:09 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::V1::ShorturlsController#create as JSON
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:21:09.632430') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 68ms (Views: 0.3ms | ActiveRecord: 3.2ms)

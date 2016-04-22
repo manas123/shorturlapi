@@ -3068,3 +3068,19 @@ Processing by Api::V1::ShorturlsController#create as JSON
   Parameters: {"url"=>"http://www.facebook.com"}
   [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:21:09.632430') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
 Completed 200 OK in 68ms (Views: 0.3ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:56:12 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::V1::ShorturlsController#create as JSON
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:26:12.594839') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 67ms (Views: 0.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/v1/shorturls?url=http://www.facebook.com" for 127.0.0.1 at 2016-04-22 21:58:53 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::V1::ShorturlsController#create as JSON
+  Parameters: {"url"=>"http://www.facebook.com"}
+  [1m[35mShorturl Load (0.8ms)[0m  SELECT  `shorturls`.* FROM `shorturls` WHERE (expires_at > '2016-04-22 16:28:53.929961') AND `shorturls`.`longurl` = 'http://www.facebook.com'  ORDER BY `shorturls`.`id` ASC LIMIT 1
+Completed 200 OK in 68ms (Views: 0.5ms | ActiveRecord: 3.2ms)
